@@ -1,0 +1,310 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Name.gd" type="Script" id=1]
+[ext_resource path="res://Montserrat-ExtraBold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Images/Quest.png" type="Texture" id=3]
+[ext_resource path="res://Images/Info/Stars_Empty.png" type="Texture" id=4]
+[ext_resource path="res://Images/Info/Stars.png" type="Texture" id=5]
+[ext_resource path="res://Quest_2.gd" type="Script" id=6]
+[ext_resource path="res://Quest_1.gd" type="Script" id=7]
+[ext_resource path="res://Quest_Select.gd" type="Script" id=8]
+[ext_resource path="res://Images/Buttonsize.PNG" type="Texture" id=9]
+[ext_resource path="res://Quest_3.gd" type="Script" id=10]
+[ext_resource path="res://Quest_4.gd" type="Script" id=11]
+[ext_resource path="res://Quest_5.gd" type="Script" id=12]
+[ext_resource path="res://Images/Refresh.png" type="Texture" id=13]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 27
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="Quest_Select" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="TextureButton" parent="."]
+margin_left = 1200.7
+margin_top = 3.77974
+margin_right = 1276.7
+margin_bottom = 78.7797
+texture_normal = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quest_1" type="TextureButton" parent="."]
+margin_left = 41.9912
+margin_top = 109.988
+margin_right = 632.991
+margin_bottom = 270.988
+texture_normal = ExtResource( 3 )
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="Quest_1"]
+margin_left = 5.91403
+margin_top = 5.53464
+margin_right = 584.914
+margin_bottom = 118.535
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reward" type="Label" parent="Quest_1"]
+margin_left = 493.755
+margin_top = 119.969
+margin_right = 589.755
+margin_bottom = 169.969
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.0745098, 1, 0, 1 )
+text = "$100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stars" type="TextureProgress" parent="Quest_1"]
+margin_left = 6.88651
+margin_top = 4.76758
+margin_right = 209.887
+margin_bottom = 46.7676
+max_value = 5.0
+value = 1.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quest_2" type="TextureButton" parent="."]
+margin_left = 41.9912
+margin_top = 278.357
+margin_right = 632.991
+margin_bottom = 439.357
+texture_normal = ExtResource( 3 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="Quest_2"]
+margin_left = 5.91403
+margin_top = 5.53464
+margin_right = 584.914
+margin_bottom = 118.535
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reward" type="Label" parent="Quest_2"]
+margin_left = 493.755
+margin_top = 119.969
+margin_right = 589.755
+margin_bottom = 169.969
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.0745098, 1, 0, 1 )
+text = "$100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stars" type="TextureProgress" parent="Quest_2"]
+margin_left = 6.88651
+margin_top = 4.76758
+margin_right = 209.887
+margin_bottom = 46.7676
+max_value = 5.0
+value = 1.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quest_3" type="TextureButton" parent="."]
+margin_left = 41.9912
+margin_top = 460.196
+margin_right = 632.991
+margin_bottom = 621.196
+texture_normal = ExtResource( 3 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="Quest_3"]
+margin_left = 5.91403
+margin_top = 5.53464
+margin_right = 584.914
+margin_bottom = 118.535
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reward" type="Label" parent="Quest_3"]
+margin_left = 493.755
+margin_top = 119.969
+margin_right = 589.755
+margin_bottom = 169.969
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.0745098, 1, 0, 1 )
+text = "$100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stars" type="TextureProgress" parent="Quest_3"]
+margin_left = 6.88651
+margin_top = 4.76758
+margin_right = 209.887
+margin_bottom = 46.7676
+max_value = 5.0
+value = 1.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quest_4" type="TextureButton" parent="."]
+margin_left = 659.345
+margin_top = 285.092
+margin_right = 1250.35
+margin_bottom = 446.092
+texture_normal = ExtResource( 3 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="Quest_4"]
+margin_left = 5.91403
+margin_top = 5.53464
+margin_right = 584.914
+margin_bottom = 118.535
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reward" type="Label" parent="Quest_4"]
+margin_left = 493.755
+margin_top = 119.969
+margin_right = 589.755
+margin_bottom = 169.969
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.0745098, 1, 0, 1 )
+text = "$100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stars" type="TextureProgress" parent="Quest_4"]
+margin_left = 6.88651
+margin_top = 4.76758
+margin_right = 209.887
+margin_bottom = 46.7676
+max_value = 5.0
+value = 1.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quest_5" type="TextureButton" parent="."]
+margin_left = 659.345
+margin_top = 460.196
+margin_right = 1250.35
+margin_bottom = 621.196
+texture_normal = ExtResource( 3 )
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="Quest_5"]
+margin_left = 5.91403
+margin_top = 5.53464
+margin_right = 584.914
+margin_bottom = 118.535
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reward" type="Label" parent="Quest_5"]
+margin_left = 493.755
+margin_top = 119.969
+margin_right = 589.755
+margin_bottom = 169.969
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.0745098, 1, 0, 1 )
+text = "$100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stars" type="TextureProgress" parent="Quest_5"]
+margin_left = 6.88651
+margin_top = 4.76758
+margin_right = 209.887
+margin_bottom = 46.7676
+max_value = 5.0
+value = 1.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Refresh" type="TextureButton" parent="."]
+visible = false
+margin_left = 868.786
+margin_top = 154.9
+margin_right = 958.786
+margin_bottom = 244.9
+texture_normal = ExtResource( 13 )
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="Quest_1" to="." method="_on_Quest_1_pressed"]
+[connection signal="pressed" from="Quest_2" to="." method="_on_Quest_2_pressed"]
+[connection signal="pressed" from="Quest_3" to="." method="_on_Quest_3_pressed"]
+[connection signal="pressed" from="Quest_4" to="." method="_on_Quest_4_pressed"]
+[connection signal="pressed" from="Quest_5" to="." method="_on_Quest_5_pressed"]
+[connection signal="pressed" from="Refresh" to="." method="_on_Refresh_pressed"]

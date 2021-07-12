@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/571370__szegvari__jazz-piano-and-orchestra-ms.wav-24d4d62a39cc035021f6d5e3643c4c8c.sample"
+
+[deps]
+
+source_file="res://571370__szegvari__jazz-piano-and-orchestra-ms.wav"
+dest_files=[ "res://.import/571370__szegvari__jazz-piano-and-orchestra-ms.wav-24d4d62a39cc035021f6d5e3643c4c8c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

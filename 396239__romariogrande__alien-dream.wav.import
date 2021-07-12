@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/396239__romariogrande__alien-dream.wav-cf6d81dd846e5f64837d63e06a5f07a6.sample"
+
+[deps]
+
+source_file="res://396239__romariogrande__alien-dream.wav"
+dest_files=[ "res://.import/396239__romariogrande__alien-dream.wav-cf6d81dd846e5f64837d63e06a5f07a6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

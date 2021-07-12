@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/128349__kafokafo__laser.wav-f73e80a796a4170771c3a79c805dc080.sample"
+
+[deps]
+
+source_file="res://128349__kafokafo__laser.wav"
+dest_files=[ "res://.import/128349__kafokafo__laser.wav-f73e80a796a4170771c3a79c805dc080.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

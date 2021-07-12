@@ -1,0 +1,31 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Images/Bullet.png" type="Texture" id=1]
+[ext_resource path="res://Bullet.gd" type="Script" id=2]
+[ext_resource path="res://Images/Bullets/Glue.png" type="Texture" id=3]
+[ext_resource path="res://Images/Bullets/Poison.png" type="Texture" id=4]
+[ext_resource path="res://Images/Bullets/Duck.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2.07066, 3.63119 )
+
+[node name="Bullet" type="KinematicBody2D"]
+position = Vector2( 343.339, -68.4155 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 0.53033 )
+shape = SubResource( 2 )

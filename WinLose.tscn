@@ -1,0 +1,197 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://WinLose.gd" type="Script" id=1]
+[ext_resource path="res://Buttonsize.PNG" type="Texture" id=3]
+[ext_resource path="res://Montserrat-ExtraBold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://238913__edtijo__hejda-depressive-guitar.wav" type="AudioStream" id=5]
+[ext_resource path="res://571370__szegvari__jazz-piano-and-orchestra-ms.wav" type="AudioStream" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[node name="WinLose" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="TextureButton" parent="."]
+margin_left = 1198.0
+margin_right = 1274.0
+margin_bottom = 75.0
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lose" type="Control" parent="."]
+margin_top = 34.0
+margin_right = 40.0
+margin_bottom = 74.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="You" type="Label" parent="Lose"]
+margin_left = 424.3
+margin_top = 22.9918
+margin_right = 648.3
+margin_bottom = 108.992
+custom_fonts/font = SubResource( 1 )
+text = "You "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lost" type="Label" parent="Lose"]
+margin_left = 577.745
+margin_top = 22.9918
+margin_right = 801.745
+margin_bottom = 84.9918
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.584314, 0, 0, 1 )
+text = "Lost!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Losing Wave" type="Label" parent="Lose"]
+margin_left = 108.353
+margin_top = 148.671
+margin_right = 332.353
+margin_bottom = 186.671
+custom_fonts/font = SubResource( 2 )
+text = "Losing Wave: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Losing Wave Number" type="Label" parent="Lose"]
+margin_left = 404.361
+margin_top = 148.671
+margin_right = 628.361
+margin_bottom = 198.671
+custom_fonts/font = SubResource( 2 )
+text = "E"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reward" type="Label" parent="Lose"]
+margin_left = 108.353
+margin_top = 198.671
+margin_right = 332.353
+margin_bottom = 236.671
+custom_fonts/font = SubResource( 2 )
+text = "Reward: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reward_Number" type="Label" parent="Lose"]
+margin_left = 297.563
+margin_top = 198.671
+margin_right = 521.563
+margin_bottom = 248.671
+custom_fonts/font = SubResource( 2 )
+text = "E"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Win" type="Control" parent="."]
+margin_top = 34.0
+margin_right = 40.0
+margin_bottom = 74.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="You" type="Label" parent="Win"]
+margin_left = 424.3
+margin_top = 22.9918
+margin_right = 648.3
+margin_bottom = 108.992
+custom_fonts/font = SubResource( 1 )
+text = "You "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Won" type="Label" parent="Win"]
+margin_left = 577.745
+margin_top = 22.9918
+margin_right = 801.745
+margin_bottom = 84.9918
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.129412, 0.741176, 0, 1 )
+text = "Won!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Losing Wave" type="Label" parent="Win"]
+margin_left = 108.353
+margin_top = 148.671
+margin_right = 332.353
+margin_bottom = 186.671
+custom_fonts/font = SubResource( 2 )
+text = "Losing Wave: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Losing Wave Number" type="Label" parent="Win"]
+margin_left = 410.222
+margin_top = 148.671
+margin_right = 634.222
+margin_bottom = 198.671
+custom_fonts/font = SubResource( 2 )
+text = "E"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reward" type="Label" parent="Win"]
+margin_left = 108.353
+margin_top = 198.671
+margin_right = 332.353
+margin_bottom = 236.671
+custom_fonts/font = SubResource( 2 )
+text = "Reward: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reward_Number" type="Label" parent="Win"]
+margin_left = 297.315
+margin_top = 198.671
+margin_right = 521.315
+margin_bottom = 248.671
+custom_fonts/font = SubResource( 2 )
+text = "E"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lose_Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -10.0
+autoplay = true
+
+[node name="Win_Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -10.0
+autoplay = true
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

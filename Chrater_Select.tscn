@@ -1,0 +1,109 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Chrater_Select.gd" type="Script" id=1]
+[ext_resource path="res://Images/Buttonsize.PNG" type="Texture" id=2]
+[ext_resource path="res://Images/Info/Techno.png" type="Texture" id=3]
+[ext_resource path="res://Images/Info/Icon.png" type="Texture" id=4]
+[ext_resource path="res://Images/Info/Bee_Icon.png" type="Texture" id=5]
+[ext_resource path="res://Images/Arrow.png" type="Texture" id=6]
+[ext_resource path="res://Images/Font.tres" type="DynamicFont" id=7]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Arrow"
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Arrow:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 40.9813, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1 )
+}
+
+[node name="Chrater_Select" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 90.7691
+margin_right = 90.769
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Techno" type="TextureButton" parent="."]
+margin_left = 117.838
+margin_top = 127.307
+margin_right = 425.838
+margin_bottom = 435.307
+texture_normal = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Roboto" type="TextureButton" parent="."]
+margin_left = 730.96
+margin_top = 119.307
+margin_right = 1038.96
+margin_bottom = 427.307
+texture_normal = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bee" type="TextureButton" parent="."]
+margin_left = 422.572
+margin_top = 121.94
+margin_right = 730.572
+margin_bottom = 429.94
+texture_normal = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="TextureButton" parent="."]
+margin_left = 1105.22
+margin_right = 1181.22
+margin_bottom = 75.0
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Arrow" type="KinematicBody2D" parent="."]
+position = Vector2( -461.517, 40.9813 )
+
+[node name="Arrow" type="Sprite" parent="Arrow"]
+position = Vector2( 274.397, 538.103 )
+scale = Vector2( 2.02948, 2.02948 )
+texture = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Arrow = SubResource( 1 )
+
+[node name="Ability" type="Label" parent="."]
+margin_left = 466.045
+margin_top = 42.2392
+margin_right = 578.045
+margin_bottom = 80.2392
+custom_fonts/font = ExtResource( 7 )
+text = "Ability:"
+
+[node name="Ability_Text" type="Label" parent="Ability"]
+margin_left = 121.232
+margin_right = 233.232
+margin_bottom = 38.0
+custom_fonts/font = ExtResource( 7 )
+text = "E"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Techno" to="." method="_on_Techno_pressed"]
+[connection signal="pressed" from="Roboto" to="." method="_on_Roboto_pressed"]
+[connection signal="pressed" from="Bee" to="." method="_on_Bee_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
